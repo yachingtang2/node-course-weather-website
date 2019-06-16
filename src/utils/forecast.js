@@ -17,7 +17,8 @@ const forecast = (latitude, longitude, callback) => {
         currently
       } = body;
 
-      const data = daily.data[0].summary + ' It is currently ' + currently.temperature + ' degrees out. There is a ' + currently.precipProbability + '% chance of rain.';
+      console.log('YCT - daily = ', daily);
+      const data = daily.data[0].summary + ' Today\'s high is ' + daily.data[0].temperatureHigh + ' degrees and low is ' + daily.data[0].temperatureLow + ' degrees. It is currently ' + currently.temperature + ' degrees out. There is a ' + currently.precipProbability + '% chance of rain.';
       callback(undefined, data);
     }
   });
